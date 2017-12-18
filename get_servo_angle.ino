@@ -1,7 +1,3 @@
-//include Servo Library to get the angle from the potentiometer
-#include <Servo.h> 
-Servo myservo;
-
 // analog pin for reading the potentiometer value
 int potPin = A0;
 
@@ -25,7 +21,6 @@ void readPotValue()
   angle = analogRead(potPin);
   angle = map(angle, 0, 1023, 0, 179);
   myservo.write(angle);
-  Serial.println(angle);
   // delay between reads for stability
   delay(readDelay);
 }
