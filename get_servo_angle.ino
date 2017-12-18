@@ -20,7 +20,6 @@ void readPotValue()
   //scale it to use witht the servo
   angle = analogRead(potPin);
   angle = map(angle, 0, 1023, 0, 179);
-  myservo.write(angle);
   // delay between reads for stability
   delay(readDelay);
 }
